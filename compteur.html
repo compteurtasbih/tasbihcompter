@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Compteur de cliques</title>
+  </head>
+  <body>
+    <p id="clickCounter">0</p>
+    <p>Cliquez sur la phrase pour incrémenter le compteur :</p>
+    <p id="clickablePhrase">Cliquez ici</p>
+    <button id="resetButton">Réinitialiser</button>
+
+    <script>
+      const clickCounter = document.getElementById("clickCounter");
+      const clickablePhrase = document.getElementById("clickablePhrase");
+      const resetButton = document.getElementById("resetButton");
+      let count = 0;
+
+      clickablePhrase.addEventListener("click", function() {
+        count++;
+        clickCounter.innerHTML = count;
+      });
+
+      resetButton.addEventListener("click", function() {
+        count = 0;
+        clickCounter.innerHTML = count;
+      });
+    </script>
+  </body>
+</html>
